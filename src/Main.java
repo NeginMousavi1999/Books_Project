@@ -17,9 +17,24 @@ public class Main {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
+                    scanner.nextLine();
                     System.out.print("Fiction or NonFiction?(f/n) ");
-                    String option = scanner.nextLine();
-                    //TODO
+                    String option = scanner.nextLine().toLowerCase();
+                    if (!option.equals("f") && !option.equals("n")) {
+                        printInvalidInput();
+                        break;
+                    }
+
+                    System.out.print("Enter title: ");
+                    String title = scanner.nextLine();
+
+                    if (option.equals("f"))
+                        useBook.createFictionBook(title);
+                    else
+                        useBook.createNonFictionBook(title);
+                    System.out.println("your book added successfully");
+                    useBook.showAllBooks();
+                    printStar();
                     break;
                 case 2:
                     break;
