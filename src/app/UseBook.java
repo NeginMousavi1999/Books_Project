@@ -1,6 +1,5 @@
 package app;
 
-import books.Book;
 import books.Fiction;
 import books.NonFiction;
 
@@ -20,8 +19,8 @@ public class UseBook {
         UseBook useBook = new UseBook();
         String option;
         Scanner scanner = new Scanner(System.in);
-        while (true){
-//            scanner.nextLine();
+
+        while (true) {
             System.out.print("Fiction or NonFiction?(f/n). to exit enter 'e': ");
             option = scanner.nextLine().toLowerCase();
             if (option.equals("e"))
@@ -38,7 +37,7 @@ public class UseBook {
                 useBook.createFictionBook(title);
             else
                 useBook.createNonFictionBook(title);
-            System.out.println("your book added successfully");
+            System.out.println("your book added successfully :)");
             useBook.showAllBooks();
             printStar();
         }
