@@ -13,4 +13,12 @@ public class NonFiction extends Book {
     public void setPrice() {
         price = 37.99;
     }
+
+    @Override
+    public String toString() {
+        return "NonFiction{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
